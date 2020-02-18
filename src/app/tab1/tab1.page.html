@@ -1,0 +1,53 @@
+
+<ion-header translucent>
+  <ion-toolbar>
+    <ion-title>Your Stats: Past 30 Days</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<!-- card on front page with graph of data (how many hot flashes?) -->
+<ion-card>
+  <ion-card-header>
+    <ion-card-title>Hot Flashes</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      <canvas id="hotflashes">{{ hotflashchart }}</canvas>
+
+    </ion-card-content>
+</ion-card>
+
+<!-- card with top triggers -->
+<ion-card>
+  <ion-card-header>
+    <ion-card-title>Your Top Triggers</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      {{ toptriggers }}
+    </ion-card-content>
+
+</ion-card>
+
+<!-- card with sleep data -->
+<ion-card>
+  <ion-card-header>
+    <ion-card-title>Sleep Report</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+        <canvas id="sleepdata">{{ sleepdatachart }}</canvas>
+
+    </ion-card-content>
+</ion-card>
+
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="10%">Stats: Past 30 Days</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <!-- <app-explore-container name="Tab 1 page"></app-explore-container> -->
+</ion-content>
